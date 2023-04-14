@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission
+        android:name="android.permission.USE_EXACT_ALARM"
+        android:minSdkVersion="33" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/billsapp"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/billsapp_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BillTracker"
+        android:windowSoftInputMode="adjustPan"
+        tools:ignore="HardcodedDebugMode">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <activity
+            android:name=".AwardCase"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7376638390241452~2472177486" />
+
+        <activity
+            android:name=".TermsAndConditions"
+            android:exported="false" />
+        <activity
+            android:name=".Support"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".MyStats"
+            android:exported="false"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name=".Administrator"
+            android:exported="false" />
+        <activity
+            android:name=".Instructions4"
+            android:exported="false" />
+        <activity
+            android:name=".Instructions3"
+            android:exported="false" />
+        <activity
+            android:name=".Instructions2"
+            android:exported="false" />
+        <activity
+            android:name=".Instructions1"
+            android:exported="false" />
+        <activity
+            android:name=".SetBiometrics"
+            android:exported="false" />
+        <activity
+            android:name=".CreatePassword"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".WelcomeEmail"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Welcome"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+
+        <receiver
+            android:name=".NotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".BillerAdded"
+            android:exported="false"
+            android:parentActivityName=".AddBiller"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".PayBill"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:parentActivityName=".MainActivity2"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".PaymentHistory"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:parentActivityName=".MainActivity2"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".EditBiller"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ViewBillers"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:parentActivityName=".MainActivity2"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".AddBiller"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:parentActivityName=".MainActivity2"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false"
+            android:label="@string/title_activity_forgot_password"
+            android:parentActivityName=".Logon"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_main2"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Settings"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".About"
+            android:exported="false"
+            android:parentActivityName=".Settings"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false"
+            android:parentActivityName=".Settings"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Logon"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
